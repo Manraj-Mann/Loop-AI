@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/create.css" />
+    <link rel="stylesheet" href="../css/post.css" />
+    <link rel="stylesheet" href="../css/generated_post.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-icon" id="back">
+        <img
+          src="../assets/left-arrow.png"
+          alt="Backward"
+          width="24"
+          height="24"
+          onclick="back()"
+        />
+      </div>
+      <div class="navbar-icon" id="forward">
+        <img
+          src="../assets/right-arrow.png"
+          alt="Forward"
+          width="24"
+          height="24"
+          onclick="forward()"
+        />
+      </div>
+      <div class="navbar-icon home">
+        <img src="../assets/home-svgrepo-com.png" alt="Home" width="26" height="26" />
+        <span onclick="home()">Home</span>
+      </div>
+      <div class="navbar-icon-useless">
+        <img
+          src="../assets/right-arrow.png"
+          alt="Forward"
+          width="16"
+          height="16"
+        />
+      </div>
+      <div class="navbar-icon create">
+        <img
+          src="../assets/star-svgrepo-com.png"
+          alt="Create"
+          width="26"
+          height="26"
+        />
+        <span onclick="create()">Create</span>
+      </div>
+      <div class="navbar-icon-useless">
+        <img
+          src="../assets/right-arrow.png"
+          alt="Forward"
+          width="16"
+          height="16"
+        />
+      </div>
+      <div class="navbar-icon create">
+        <img
+          src="../assets/plus.png"
+          alt="Create"
+          width="26"
+          height="26"
+        />
+        <span onclick="post()">Post</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="left-section">
+        <!-- Add content within the left section if needed -->
+        <img class="generated_image" src="../assets/temp image.png" />
+      </div>
+      <div class="right-section">
+        <div class="button-container" >
+          <h1>Create Post</h1>
+          <svg
+          width="30"
+          height="30"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30.54 21.3099C31.1924 21.3099 31.8181 21.0507 32.2795 20.5894C32.7408 20.128 33 19.5023 33 18.8499C33 18.1975 32.7408 17.5717 32.2795 17.1104C31.8181 16.6491 31.1924 16.3899 30.54 16.3899C29.8876 16.3899 29.2619 16.6491 28.8005 17.1104C28.3392 17.5717 28.08 18.1975 28.08 18.8499C28.08 19.5023 28.3392 20.128 28.8005 20.5894C29.2619 21.0507 29.8876 21.3099 30.54 21.3099ZM19.46 21.3099C20.1124 21.3099 20.7381 21.0507 21.1995 20.5894C21.6608 20.128 21.92 19.5023 21.92 18.8499C21.92 18.1975 21.6608 17.5717 21.1995 17.1104C20.7381 16.6491 20.1124 16.3899 19.46 16.3899C18.8076 16.3899 18.1819 16.6491 17.7205 17.1104C17.2592 17.5717 17 18.1975 17 18.8499C17 19.5023 17.2592 20.128 17.7205 20.5894C18.1819 21.0507 18.8076 21.3099 19.46 21.3099ZM30.54 33.6099C30.8631 33.6099 31.1829 33.5463 31.4814 33.4226C31.7799 33.299 32.051 33.1178 32.2795 32.8894C32.5079 32.6609 32.6891 32.3898 32.8127 32.0913C32.9364 31.7928 33 31.4729 33 31.1499C33 30.8268 32.9364 30.507 32.8127 30.2085C32.6891 29.91 32.5079 29.6388 32.2795 29.4104C32.051 29.182 31.7799 29.0008 31.4814 28.8771C31.1829 28.7535 30.8631 28.6899 30.54 28.6899C29.8876 28.6899 29.2619 28.9491 28.8005 29.4104C28.3392 29.8717 28.08 30.4975 28.08 31.1499C28.08 31.8023 28.3392 32.428 28.8005 32.8894C29.2619 33.3507 29.8876 33.6099 30.54 33.6099ZM19.46 33.6099C19.7831 33.6099 20.1029 33.5463 20.4014 33.4226C20.6999 33.299 20.9711 33.1178 21.1995 32.8894C21.4279 32.6609 21.6091 32.3898 21.7327 32.0913C21.8564 31.7928 21.92 31.4729 21.92 31.1499C21.92 30.8268 21.8564 30.507 21.7327 30.2085C21.6091 29.91 21.4279 29.6388 21.1995 29.4104C20.9711 29.182 20.6999 29.0008 20.4014 28.8771C20.1029 28.7535 19.7831 28.6899 19.46 28.6899C18.8076 28.6899 18.1819 28.9491 17.7205 29.4104C17.2592 29.8717 17 30.4975 17 31.1499C17 31.8023 17.2592 32.428 17.7205 32.8894C18.1819 33.3507 18.8076 33.6099 19.46 33.6099Z"
+              stroke="#111827"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <rect
+              x="1"
+              y="1"
+              width="48"
+              height="48"
+              rx="12"
+              stroke="#D1D5DB"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+
+        <div class="input-field-container">
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Your title goes here ....."
+          />
+        </div>
+
+        <div class="input-field-container">
+          <label for="genres">Tags:</label>
+          <div class="tag-container">
+            <div class="tags" id="selected-tags"></div>
+            <input
+              type="text"
+              id="genres"
+              onkeydown="addTag(event)"
+              style="width: calc(100% - 80px)"
+              placeholder="Enter the tag and press enter ....."
+            />
+          </div>
+        </div>
+        <div class="input-field-container">
+          <label for="description">Description:</label>
+          <textarea
+            id="description"
+            placeholder="Talk about your art ......"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="create-section">
+          <div class="save-draft-button" onclick="save_draft()">Save as Draft</div>
+          <div class="create-button" onclick="create_post()">Create</div>
+        </div>
+        <div class="loader" >
+          <img src="../assets/R.gif" alt="Loading..." class="loading-gif" />
+          <div class="loader-text">Generating Image !</div>
+          <div class="loader-tag-line">
+            Amazing ! I wonder how you think so well !
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <script src="../javascript/create.js"></script>
+    <script src="../javascript/post.js"></script>
+  </body>
+</html>

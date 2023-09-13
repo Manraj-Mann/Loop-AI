@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/generated_post.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sofia+Sans+Condensed:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="assets/fontawesome-6.4.0/css/all.css"
+  </head>
+  <body>
+    <div class="logo">
+      <img src="assets/artificial-intelligence.png" alt="Logo" />
+      <span class="logo-text">Loop Ai</span>
+    </div>
+
+    <div class="sidenav">
+      <div class="create-btn" onclick="create()">
+        <i class="fa-regular fa-star"></i>
+        Create
+      </div>
+      <a href="#" class="home-nav"><i class="fa-solid fa-house"></i>Home</a>
+      <a href="#" class=cCollection ><i class="fa-solid fa-layer-group"></i>Collection</a>
+      <a href="#"><i class="fa-solid fa-download"></i>Downloads</a>
+      <a href="#" class="chat-nav"><i class="fa-solid fa-message"></i>Chat</a>
+      <a href="#"><i class="fa-solid fa-clock-rotate-left"></i>History</a>
+      <a id="bottom-flex" href="#"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+    </div>
+
+    <div class="main">
+      <div class="upper-main">
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <div class="search-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M17 17L21 21"
+                  stroke="#000000"
+                  stroke-width="0.8879999999999999"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                  stroke="#000000"
+                  stroke-width="0.8879999999999999"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="user-info" onclick="showPopup()">
+          <img src="assets/profile.png" alt="Profile Image" id="profile-img" class="profile-img-header" />
+          <span id="username">Sign up / Log in</span>
+        </div>
+      </div>
+
+      <div class="tags-section">
+        <div class="tags">
+          <div class="tag">Tag 1</div>
+          <div class="tag">Tag 2</div>
+          <div class="tag">Tag 3</div>
+          <div class="tag add-tag">+</div>
+        </div>
+        <div class="filter-btn">
+          <div class="text">
+            <i class="fa-solid fa-filter"></i><span>Filter</span>
+            <i class="down-arrow"></i>
+          </div>
+          <div class="dropdown-content">
+            <a href="#" onclick="filter(0)">Oldest</a>
+            <a href="#" onclick="filter(1)">Newest</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-gallery">
+        <div class="loader" id="loader">
+          <img src="./assets/R2.gif" , alt="Loading..." />
+          <div class="loader-text">Loading your feed !!</div>
+          <div class="loader-tag-line">
+            It will take just a second !
+          </div>
+        </div>
+        <!-- <div class="card">
+          <div class="card-image">
+            <img src="assets/demo.png" alt="Dummy Image">
+          </div>
+          <div class="card-details">
+            <div class="profile">
+              <img src="assets/profile.png" alt="Dummy Profile Image" class="profile-image">
+              <span class="username">User Name</span>
+            </div>
+            <div class="likes">
+              <i class="fa-regular fa-heart"></i>
+              <span class="like-count">100</span>
+            </div>
+            <div class="views">
+              <i class="fa-regular fa-eye"></i>
+              <span class="view-count">500</span>
+            </div>
+          </div>
+        </div> -->
+        
+
+        
+      </div>
+
+    
+    </div>
+
+    <!-- popup-container -->
+    <div class="popup-container" onclick="hidePopup()">
+      <div class="popup" onclick="event.stopPropagation()">
+        <h2>Sign In / Sign Up</h2>
+    
+        <input type="text" placeholder="Username" id="username-login" />
+        <input type="password" placeholder="Password" id="password" />
+        <div class="btn-container">
+          <button class="login-btn" onclick="login()">Log In</button>
+          <button class="signup-btn" onclick="signup()">Sign Up</button>
+        </div>
+    
+        <button class="close-btn" onclick="hidePopup()">Close</button>
+      </div>
+    </div>
+
+    
+    
+    <div id="toast-container"></div>
+
+    <!-- chat-container -->
+    <div class="chat-container">
+      <div class="chat-box">
+        <!-- <div class="chat-info user-chat-box"><span class="chat-text-box user-chat">Im sorry Eren its all my fault, These people have nothing to do with what i've done.</span><img class="chat-profile-img-user" src="assets/profile.png" alt="Profile Image" id="profile-img" /><span class="chat-other-user-info"><span class="other-user-name">Reiner Braun</span><span class="time-user">10:09 am</span></span></div>
+        <div class="chat-info other-user-chat-box"><span class="chat-other-user-info"><span class="other-user-name">Eren Jeager</span><span class="time-other-user">10:10 am</span></span><span></span><img class="chat-profile-img-other" src="assets/profile.png" alt="Profile Image" id="profile-img" /><span class="chat-text-box other-user-chat">Until all my enemies are dead, I will keep moving forward.</span></div>
+        <div class="chat-info user-chat-box"><span class="chat-text-box user-chat">Just some small meassage.</span><img class="chat-profile-img-user" src="assets/profile.png" alt="Profile Image" id="profile-img" /><span class="chat-other-user-info"><span class="other-user-name">Reiner Braun</span><span class="time-user">10:09 am</span></span></div>
+        <div class="chat-info other-user-chat-box"><span class="chat-other-user-info"><span class="other-user-name">Eren Jeager</span><span class="time-other-user">10:10 am</span></span><span></span><img class="chat-profile-img-other" src="assets/profile.png" alt="Profile Image" id="profile-img" /><span class="chat-text-box other-user-chat">another small message.</span></div>
+        <div class="chat-info user-chat-box"><span class="chat-text-box user-chat">Im sorry Eren its all my fault, These people have nothing to do with what i've done.</span><img class="chat-profile-img-user" src="assets/profile.png" alt="Profile Image" id="profile-img" /><span class="chat-other-user-info"><span class="other-user-name">Reiner Braun</span><span class="time-user">10:09 am</span></span></div> -->
+       </div>
+      <div class="message-box" id="message-box">
+        <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3121 23.3511C17.4463 23.0228 16.7081 22.5979 16.1266 22.1995C14.8513 22.7159 13.4578 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 14.2788 22.306 16.3983 21.1179 18.1551C21.0425 19.6077 21.8054 20.9202 22.5972 22.0816C23.2907 23.0987 23.1167 23.9184 21.8236 23.9917C21.244 24.0245 19.9903 23.9874 18.3121 23.3511ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 13.9503 20.3808 15.7531 19.328 17.2262C18.8622 17.8782 19.1018 19.0998 19.2616 19.8011C19.4167 20.4818 19.7532 21.2051 20.0856 21.8123C19.7674 21.7356 19.4111 21.6288 19.0212 21.481C18.1239 21.1407 17.3824 20.6624 16.8594 20.261C16.5626 20.0332 16.1635 19.9902 15.825 20.1494C14.6654 20.6947 13.3697 21 12 21C7.02944 21 3 16.9706 3 12ZM7 9C6.44772 9 6 9.44771 6 10C6 10.5523 6.44772 11 7 11H17C17.5523 11 18 10.5523 18 10C18 9.44771 17.5523 9 17 9H7ZM7 13C6.44772 13 6 13.4477 6 14C6 14.5523 6.44772 15 7 15H17C17.5523 15 18 14.5523 18 14C18 13.4477 17.5523 13 17 13H7Z" fill="#2563eb"></path> </g></svg>
+        <textarea class="text-box" id="text-box" type="text" rows="1" enterkeyhint="send" placeholder="Type a message here" autofocus></textarea>
+        <svg onclick="send_message()" class="send-icon" width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="send" class="icon glyph" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21.66,12a2,2,0,0,1-1.14,1.81L5.87,20.75A2.08,2.08,0,0,1,5,21a2,2,0,0,1-1.82-2.82L5.46,13H11a1,1,0,0,0,0-2H5.46L3.18,5.87A2,2,0,0,1,5.86,3.25h0l14.65,6.94A2,2,0,0,1,21.66,12Z" style="fill:#2563eb"></path></g></svg>
+      </div>
+
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

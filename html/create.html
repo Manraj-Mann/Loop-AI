@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/create.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-icon" id="back">
+        <img
+          src="../assets/left-arrow.png"
+          alt="Backward"
+          width="24"
+          height="24"
+          onclick="back()"
+        />
+      </div>
+      <div class="navbar-icon" id="forward">
+        <img
+          src="../assets/right-arrow.png"
+          alt="Forward"
+          width="24"
+          height="24"
+          onclick="forward()"
+        />
+      </div>
+      <div class="navbar-icon home">
+        <img src="../assets/home-svgrepo-com.png" alt="Home" width="26" height="26" />
+        <span id="home" onclick="home()">Home</span>
+      </div>
+      <div class="navbar-icon-useless">
+        <img
+          src="../assets/right-arrow.png"
+          alt="Forward"
+          width="16"
+          height="16"
+        />
+      </div>
+      <div class="navbar-icon create">
+        <img src="../assets/star.png" alt="Create" width="32" height="32" />
+        <span id="create" onclick="create()">Create</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="left-section">
+        <!-- Add content within the left section if needed -->
+        <img class="generated_image" src="../assets/temp image.png" />
+      </div>
+      <div class="right-section">
+        <div class="button-container">
+          <button onclick="generate_post()" >Generate Image</button>
+          <button onclick="image_variant()">Image Variant</button>
+          <button onclick="image_edit()">Edit Image</button>
+        </div>
+
+        <div class="input-field-container">
+          <label for="prompt">Prompt:</label>
+          <input type="text" id="prompt" placeholder="Enter the prompt here ....."/>
+        </div>
+
+        <div class="input-field-container">
+          <label for="keyword">Keyword:</label>
+          <input type="text" id="keyword" placeholder="Enter the keyword here ....." />
+        </div>
+
+        <div class="input-field-container">
+          <label for="genres">Genres:</label>
+          <div class="tag-container">
+            <div class="tags" id="selected-tags"></div>
+            <input
+              type="text"
+              id="genres"
+              onkeydown="addTag(event)"
+              style="width: calc(100% - 80px)"
+              placeholder="Enter the genre and press enter ....."
+            />
+            <select style="width: 100px">
+              <option>256x256</option>
+              <option>512x512</option>
+              <option>1024x1024</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="create-section">
+          <div class="create-button" onclick="create_image()">Create</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../javascript/create.js">
+      
+    </script>
+  </body>
+</html>

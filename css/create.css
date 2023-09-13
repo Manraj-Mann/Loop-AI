@@ -1,0 +1,252 @@
+/* CSS styles for the navigation bar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 1px;
+  margin-left: 14px;
+  margin-top: 12px;
+}
+
+.navbar {
+  position: sticky;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.navbar-icon :hover {
+  color: #000000;
+  cursor: pointer;
+  
+}
+
+
+.navbar-icon-useless {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
+}
+
+.navbar-icon img {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+
+.navbar-icon span{
+  font-weight: bold;
+
+}
+
+
+/* Updated styles for specific icons */
+
+.navbar{
+  color: #8e8e8e;
+}
+.navbar:last-child span {
+
+  color: #000000;
+}
+
+
+span {
+  font-size: 16px;
+}
+
+/* CSS styles for the left and right sections */
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.left-section {
+  flex: 0.6;
+  background-color: #f1f1f1;
+  /* border: 2px dashed #050202; */
+  margin: 20px;
+  margin-left: 14px;
+  height: calc(100% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 6px rgb(75, 75, 75);
+  border-radius: 20px;
+}
+
+.left-section img {
+  width: 98%;
+  height: 98%;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-right: 50px;
+}
+
+.button-container {
+  display: flex;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  border: #d4d1d1 solid 1px;
+  /* padding: 5px; */
+  margin-bottom: 20px;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  
+  width: fit-content;
+}
+
+.button-container button {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18px;
+  color: rgba(115, 115, 115, 0.466);
+  font-weight: 600;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  /* margin-right: 10px; */
+
+  cursor: pointer;
+}
+
+.button-container button:last-child {
+  margin-right: 0;
+}
+
+.button-container button:hover {
+  color: rgb(255, 255, 255);
+  background-color: #2563eb;
+}
+.button-container button:nth-child(1) {
+  color: rgb(0, 0, 0);
+  background-color: #efefef;
+}
+
+.input-field-container {
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-field-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-field-container input[type="text"],
+.input-field-container select {
+
+  font-family: "Rajdhani", sans-serif;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.tag-container {
+  display: flex;
+  align-items: center;
+  /* Remove margin-bottom */
+}
+
+.tag-container input[type="text"] {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.tag-container button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tag-container .tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* Remove margin-bottom */
+}
+
+.tag-container .tags .tag {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+
+  color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background-color: #0eb713d6;
+}
+
+.tag-container .tags .tag.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.tag-container .tags .tag .tag-text {
+  margin-right: 5px;
+}
+
+.tag-container .tags .tag .tag-remove {
+  font-weight: bold;
+  cursor: pointer;
+}
+.create-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.create-button {
+  margin-top: auto; /* Add this line */
+  /* margin-bottom: 5px; Add this lin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px; /* Adjust the width as needed */
+  height: 40px;
+  background-color: #2563eb;
+  color: #ffffff;
+  /* font-family: "Inter", sans-serif; */
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.create-button:hover {
+  background-color: #1e4bb3;
+}

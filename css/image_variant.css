@@ -1,0 +1,17 @@
+body{
+    font-family: "Rajdhani", sans-serif;
+}
+
+.button-container button:nth-child(1) {
+    color: rgba(115, 115, 115, 0.466);
+    background-color: transparent
+}
+
+.button-container button:hover {
+    color: rgb(255, 255, 255);
+    background-color: #2563eb;
+}
+.button-container button:nth-child(2) {
+    color: rgb(0, 0, 0);
+    background-color: #efefef;
+}

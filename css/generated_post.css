@@ -1,0 +1,205 @@
+body {
+  font-family: "Rajdhani", sans-serif;
+}
+.generated_image{
+  width: 100%;
+  height: auto;
+}
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-right: 50px;
+}
+.left-section {
+  background-color: white;
+  
+}
+.additional-content {
+  display:none;
+  margin: auto;
+}
+
+.success-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.success-text {
+  color: orange;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.tag-line {
+  text-align: center;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+.button-separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-separator button {
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  width: 75%;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.button-separator button:first-child {
+  background-color: #2563eb;
+  color: white;
+  border: 1px solid #2563eb;
+}
+
+#download {
+  border: 1px solid #2563eb;
+}
+
+#create-post {
+  border: none;
+}
+
+.button-separator button svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-icons svg {
+  width: 28px;
+  height: 28px;
+  margin: 0 12px;
+  fill: #ccc;
+  transition: fill 0.3s ease;
+}
+
+.social-media-icons svg:hover {
+  cursor: pointer;
+  fill: #1d54cb;
+}
+
+hr {
+  height: 1px;
+  width: 90%;
+  background-color: #ccc;
+}
+
+#download:hover {
+  background-color: #1d54cb;
+  color: white;
+}
+
+#create-post:hover {
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
+
+.loader {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.loader img{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  height: 70%;
+  width: 80%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.loader-text{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  color: orange;
+  font-size: 30px;
+  animation: text-animation 3s infinite;
+  background: linear-gradient(135deg, #0a60ff, #00c2ff , #0affde);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loader-tag-line {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+  color: gray;
+}
+
+@keyframes text-animation {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+#try-again:hover {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: #1d54cb;
+  color: white;
+}
+#try-again{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: #2563eb;
+  color: white;
+  border: 1px solid #2563eb;
+  display: none;
+}
+
+#download-button{
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  
+}
+
+#try-again svg{
+
+  vertical-align: middle;
+}
