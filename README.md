@@ -7,8 +7,7 @@ Open AI Based Image generation website
 ![image](https://github.com/Manraj-Mann/Loop-AI/blob/main/Sample%20Images/Screenshot%202023-09-13%20172038.png)
 
 ## Home Feed 
-![image](https://github.com/Manraj-Mann/Loop-AI/blob/main/Sample%20Images/Screenshot%202023-09-13%20172038.png)
-
+![image](https://github.com/Manraj-Mann/Loop-AI/blob/main/Sample%20Images/Screenshot%202023-09-13%20172104.png)
 
 ## Global Chat 
 ![chat image](https://github.com/Manraj-Mann/Loop-AI/blob/main/Sample%20Images/Screenshot%202023-09-13%20170319.png)
